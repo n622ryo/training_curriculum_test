@@ -40,8 +40,8 @@ class CalendarsController < ApplicationController
       if wday_num >= 7 #②条件式を記述　条件式はもしも「wday_numが7以上であれば」を書く。
         wday_num = wday_num - 7
       end
-      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans, wday: wdays[wday_num]}#③wday_numが配列の呼び出す添字になることに注意して、wdaysから添字を使って曜日の文字列を取り出す。
-
+      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans, wday: wdays[wday_num]}
+      #③wday_numが配列の呼び出す添字になることに注意して、wdaysから添字を使って曜日の文字列を取り出す。
       @week_days.push(days)
     end
 
